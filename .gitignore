@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# AI同传项目额外忽略
+env/
+.env
+.env/
+*.log
