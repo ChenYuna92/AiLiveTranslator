@@ -1,20 +1,28 @@
 {
   "audio": {
     "sample_rate": 16000,
-    "chunk_seconds": 2.0,
+    "chunk_seconds": 1.0,
     "device_id": null
   },
   "asr": {
-    "model_size": "tiny",
+    "model_size": "small",
     "language": "en",
     "device": "cpu",
-    "compute_type": "int8"
+    "compute_type": "int8",
+    "beam_size": 3,
+    "initial_prompt": "This is an English speech, online course, technical talk or meeting. Common terms include AI, model, data, system, product, feature, user, API, Python, GitHub, cloud, audio, translation, subtitle."
   },
   "translation": {
     "provider": "tencent",
     "source_lang": "en",
     "target_lang": "zh",
     "region": "ap-shanghai"
+  },
+  "stream": {
+    "context_seconds": 6.0,
+    "min_update_seconds": 1.0,
+    "min_translate_words": 8,
+    "max_wait_seconds": 2.8
   },
   "ui": {
     "topmost": true,
